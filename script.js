@@ -7,3 +7,15 @@ function colorSelected() {
 
 }
 colorSelected();
+
+
+//Desafio 7
+
+let x = document.getElementById('color-palette');
+function mudarCor (parametro) {
+  let selected = document.querySelector('.selected')
+  selected.classList.remove('selected')
+  parametro.target.classList.add('selected')
+}
+
+x.addEventListener('click', mudarCor)
