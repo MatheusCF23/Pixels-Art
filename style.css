@@ -2,12 +2,15 @@
   text-align: center;
 }
 
-#color-palette .color{
+#color-palette{
+  text-align: center;
+} 
+
+.color{
   height: 40px;
   width: 40px;
   border: 1px solid black;
   display: inline-block;
-  text-align: center;
 }
 
 .color:nth-child(1){
@@ -24,4 +27,17 @@ background-color: black;
 
 .color:nth-child(4){
   background-color: green;
+}
+
+#pixel-board {
+  text-align: center;
+}
+
+.pixel{
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center;
+  background-color: white;
 }
