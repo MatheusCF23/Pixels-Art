@@ -30,7 +30,10 @@ background-color: black;
 }
 
 #pixel-board {
-  text-align: center;
+  height: 210px;
+  width: 210px;
+  margin: auto;
+  font-size: 0;
 }
 
 .pixel{
