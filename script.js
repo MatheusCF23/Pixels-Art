@@ -45,3 +45,15 @@ function addCor (parametro3) {
   parametro3.target.style.backgroundColor = a
 }
 y.addEventListener('click', addCor);
+
+
+// Desafio 9
+let z = document.getElementById('clear-board');
+
+function limpar () {
+   let selected = document.getElementsByClassName('pixel');
+   for (let i = 0; i < selected.length; i += 1){
+    selected[i].style.backgroundColor = 'white';
+   }
+   }
+z.addEventListener('click', limpar);
