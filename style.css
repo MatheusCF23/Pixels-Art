@@ -29,8 +29,13 @@ background-color: black;
   background-color: green;
 }
 
-#butão{
+#botão{
  text-align: center;
+}
+
+#bonus{
+  display: inline-block;
+  text-align: center;
 }
 
 #pixel-board {
