@@ -1,12 +1,12 @@
-function criaTabela () {
-  let paiTabela = document.getElementById('pixel-board');
-  for(let i = 1; i <= 25; i += 1) {
-    let div = document.createElement('div');
-    div.className = 'pixel';
-    paiTabela.appendChild(div);
-  }
-}
-criaTabela();
+//function criaTabela () {
+  //let paiTabela = document.getElementById('pixel-board');
+  //for(let i = 1; i <= 25; i += 1) {
+    //let div = document.createElement('div');
+    //div.className = 'pixel';
+    //paiTabela.appendChild(div);
+  //}
+//}
+//criaTabela();
 
 
 //preciso pegar um elemento e atribuir a ele a class 'selected'
@@ -71,19 +71,42 @@ function limpar() {
 z.addEventListener('click', limpar);
 
 
-// Desafio 10
+// Desafio 10 e 11.
 
-//const boardSize = document.getElementById('board-size');
+const board = document.getElementById('pixel-board');
+const getnum = document.getElementById('get-numero');
+const geraBoardBtn = document.getElementById('generate-board');
+const boardSize = document.getElementById('board-size');
 
-
-
-
-
-
-
-
-
-
+function testBoard(event) {
+  if (event === '') {
+    alert('Board inválido!');
+  };
+};
+function box(n) {
+  for (let index = 0; index < n; index += 1) {
+    let div = document.createElement('div');
+    div.className = 'pixel';
+    board.appendChild(div);
+  };
+};
+box(25);
+geraBoardBtn.addEventListener('click', function () {
+  let criaSizeBox = boardSize.value;
+  // let criaSizeBox1 = parseInt(criaSizeBox);
+  let todeSacoCheio = 1;
+  if (criaSizeBox < 5 && criaSizeBox > 0) {
+    todeSacoCheio = 5;
+  } else if (criaSizeBox > 50) {
+    todeSacoCheio = 50;
+  } else { todeSacoCheio = criaSizeBox; };
+  console.log(todeSacoCheio);
+  testBoard(boardSize.value);
+  board.innerHTML = '';
+  board.style.setProperty('--tamanho',todeSacoCheio);
+  box(todeSacoCheio * todeSacoCheio);
+});
+console.log('2',boardSize.value);
 
 
 //Desafio 12
